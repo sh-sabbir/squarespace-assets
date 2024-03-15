@@ -1,5 +1,9 @@
-# Squarespace Assets
+<h1 align="center">Squarespace Assets</h1>
+<p align="center">
 This Chrome extension simplifies the process of copying asset URLs from the Squarespace assets library. It provides a convenient way to extract URLs for image files directly from your Squarespace account.
+<br><br>
+<img src='./preview/screenshot.png' width="640">
+</p>
 
 ## Installation
 To install the extension, follow these steps:
