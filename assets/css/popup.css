@@ -1,0 +1,210 @@
+:root {
+	--color-background: white;
+	--color-background-dark: #121212;
+	--color-background-dark-lighten: #2b2b2b;
+	--color-primary: #4608ad;
+	--color-primary-lighten: #f4f1fa;
+	--color-secondary: #fafafa;
+	--color-secondary-dark: #1e1e1e;
+	--color-border: #ebebeb;
+	--color-border-dark: #2b2b2b;
+	--color-text: #4a4a4a;
+	--color-text-lighten: #7a7a7a;
+	--color-text-dark: var(--color-background);
+	--color-text-dark-lighten: #979797;
+	--color-anchor-dark: var(--color-text-dark);
+	--color-success: #50b154;
+	--color-error: #ff5252;
+}
+
+* {
+	box-sizing: border-box;
+	scrollbar-width: none;
+}
+
+body {
+	background: var(--color-primary);
+	color: var(--color-text);
+	direction: ltr;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+	margin: 0;
+	overflow: hidden;
+}
+
+.body__popup {
+	min-width: 24rem;
+	max-width: 34rem;
+}
+
+.popup {
+	background: var(--color-background);
+	min-height: 24rem;
+	max-height: 34rem;
+	overflow-y: auto;
+}
+
+.header {
+	align-items: center;
+	background: var(--color-background-dark);
+	display: flex;
+	height: 4.5rem;
+	justify-content: space-between;
+	padding: 0 1.5rem;
+}
+
+.header__logo {
+	height: 2.5rem;
+	margin-top: 0.5rem;
+}
+
+.header button {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	background: rgba(168, 179, 207, 0.08);
+	border: unset;
+	color: #a8b3cf;
+	padding: 6px 20px;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 12px;
+	visibility: hidden;
+}
+
+.header button:hover {
+	background: #a8b3cf1f;
+	color: #fff;
+	cursor: pointer;
+}
+
+.header button svg {
+	margin-left: -8px;
+}
+
+.body {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	padding: 10px 20px 20px;
+}
+
+.wrong-place {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.wrong-place .big {
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: bold;
+	margin-top: 16px;
+	margin-bottom: 8px;
+}
+
+/* Loader */
+.loader {
+	width: 35px;
+	aspect-ratio: 1;
+	--_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+	background: var(--_g) 0 0, var(--_g) 100% 0, var(--_g) 100% 100%,
+		var(--_g) 0 100%;
+	background-size: 40% 40%;
+	animation: l38 0.5s infinite;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+@keyframes l38 {
+	100% {
+		background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+	}
+}
+
+/* Assets List */
+.assetsList {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 10px;
+	border: 1px solid #dfdfdf;
+	border-radius: 6px;
+}
+.asset {
+	display: flex;
+	gap: 12px;
+	border-bottom: 1px solid #eeeeee;
+	padding-bottom: 5px;
+	align-items: center;
+}
+.asset:last-child {
+	border-bottom: none;
+	padding-bottom: unset;
+}
+.preview {
+	height: 46px;
+	width: 46px;
+	object-fit: cover;
+	border-radius: 4px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	background: #e6e6e6;
+}
+.fileName {
+	flex-grow: 1;
+	text-overflow: ellipsis;
+	font-size: 13px;
+	color: #222222;
+	font-weight: 500;
+}
+.actionCopy {
+	align-items: center;
+	background-color: transparent;
+	border: none;
+	border-radius: 12px;
+	box-shadow: none;
+	cursor: pointer;
+	display: inline-flex;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-shrink: 0;
+	font-size: 18px;
+	font-weight: 700;
+	height: 2rem;
+	justify-content: center;
+	margin-left: auto;
+	padding: 0;
+	text-decoration: none;
+	transition-property: background-color, color, fill, stroke, opacity,
+		box-shadow, transform;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	user-select: none;
+	width: 2rem;
+}
+
+.actionCopy svg {
+	pointer-events: none;
+	user-select: none;
+}
+
+.actionCopy:hover {
+	background-color: #efefef;
+}
+
+.actionCopy.copied {
+	background-color: #28c840;
+	color: #28c840;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(255,255,255,1)'%3E%3Cpath d='M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.actionCopy.copied svg {
+	visibility: hidden;
+}
