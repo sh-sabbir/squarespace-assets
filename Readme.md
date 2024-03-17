@@ -8,12 +8,7 @@ This Chrome extension simplifies the process of copying asset URLs from the Squa
 ## Installation
 To install the extension, follow these steps:
 
-1. **Download the CRX File:** Download the extension file (.crx) from the repository.
-2. **Open Chrome Extensions:** Type `chrome://extensions/` in the address bar of your Chrome browser and press Enter.
-3. **Enable Developer Mode:** Toggle the Developer mode switch at the top-right corner of the Extensions page.
-4. **Install the Extension:** Drag and drop the downloaded CRX file onto the Extensions page. Alternatively, click on the "Load unpacked" button and select the folder containing the CRX file.
-5. **Confirm Installation:** If prompted, confirm the installation of the extension.
-6. **Extension Installed:** Once installed, the extension icon should appear in the Chrome toolbar.
+1. **Download the Extension:** https://chrome.google.com/webstore/detail/squarespace-assets/maiahpdbookhhbdnpcphbhmanbnndlgn
 
 ## How to Use
 Using the extension is straightforward:
